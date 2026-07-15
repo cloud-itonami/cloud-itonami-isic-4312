@@ -1,0 +1,38 @@
+{:itonami.blueprint/id "cloud-itonami-4312"
+ :itonami.blueprint/name "Site Preparation"
+ :itonami.blueprint/isic-rev5 "4312"
+ :itonami.blueprint/domain :construction/site-preparation
+ :itonami.blueprint/license "AGPL-3.0-or-later"
+ :itonami.blueprint/social-impact [:worker-safety :utility-strike-prevention :land-redevelopment]
+ :itonami.blueprint/governor :site-prep-governor
+ :itonami.blueprint/robotics false
+ :itonami.blueprint/required-technologies [:identity :forms :audit-ledger :notifications]
+ :itonami.blueprint/status :public-oss
+ :itonami.blueprint/maturity :implemented
+ :itonami.blueprint/implemented-slice
+ "`:site-prep-governor` is implemented end-to-end in `src/site_prep` as a
+ SITE-PREPARATION-PROJECT OPERATIONS COORDINATION actor -- Site Prep
+ Advisor (LLM proposal-only) ⊣ Site Prep Governor (closed-op-allowlist /
+ site-verification / utility-locate / notification-lead-time / unresolved-
+ concern hard-gates). Deliberately narrower in authority than the
+ `cloud-itonami-isic-4211` (construction) robotics-premise reference this
+ actor follows structurally: `:itonami.blueprint/robotics` is honestly
+ `false` here -- this actor holds NO excavation/earth-moving-equipment-
+ control authority and NO geotechnical/site-readiness sign-off authority
+ (both are HARD, permanent governor blocks, never overridable by human
+ approval -- see `site-prep.governor` ns docstring), matching the
+ deliberately-narrowed posture `cloud-itonami-isic-4311` (Demolition)
+ established for this fleet. Every one of its four proposal ops
+ (`:log-site-record` / `:schedule-site-operation` / `:flag-safety-concern`
+ / `:order-supplies`) carries `:effect :propose` ONLY -- the governor
+ HARD-holds any proposal that doesn't (`effect-not-propose-violations`), a
+ structural invariant distinguishing this actor from siblings that DO
+ commit real-world actuation effects. Per-jurisdiction utility-locate/
+ excavation-notification legal-basis catalog (JPN/USA/DEU,
+ `site-prep.facts`) with real official sources, and mail+phone
+ (Resend+Twilio) safety-concern notification (`site-prep.notify`) to the
+ site's licensed-engineer/site-supervisor/geotechnical-authority contact
+ roster. `:flag-safety-concern` and `:schedule-site-operation` ALWAYS
+ escalate to a human, at every phase, unconditionally. See `docs/` --
+ README `Actuation` section -- for the full governor-check enumeration and
+ the rationale for each hard/soft rule."}
