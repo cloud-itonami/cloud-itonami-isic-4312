@@ -24,7 +24,7 @@
   `site-prep.operation`'s `:commit` node calls this, a human has already
   reviewed the concern. This namespace builds/sends the message; it does
   NOT decide whether to send one."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defprotocol Notifier
   (-send-mail! [n msg] "msg: {:to :subject :body} -> {:status :channel :to ..}")
