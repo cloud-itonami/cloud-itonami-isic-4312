@@ -85,7 +85,7 @@ narrowed to coordination-only authority as described above.
 | `:flag-safety-concern` | surface an excavation-collapse / buried-utility-strike / contamination concern | Drafts a safety-concern flag; ALWAYS escalates to a human, unconditionally. Once approved, `site-prep.notify` sends the notice (mail + phone) to the site's licensed-engineer/site-supervisor/geotechnical-authority contact roster. |
 | `:order-supplies` | equipment/materials procurement proposal | Drafts a supply-order proposal. Escalates above a cost threshold or below the confidence floor; may auto-commit at phase 3 otherwise. |
 
-**Legal basis is data, not code** -- `src/site_prep/facts.cljc`'s
+**Legal basis is data, not code** -- `src/site_prep/facts.cljk`'s
 `catalog` is the per-jurisdiction EDN source-of-truth the governor checks
 every `:schedule-site-operation` proposal against (JPN/USA/DEU seeded;
 DEU stands in for the EU, the same convention `construction.facts`/
