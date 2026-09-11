@@ -41,7 +41,7 @@ Include:
 - Store secrets (RESEND_API_KEY, TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
   outside Git.
 - Keep real site/utility-locate/personal data outside this repository.
-- Run the full test suite (`clojure -M:dev:test`) before deployment.
+- Run the full test suite (`kbb -M:dev:test`) before deployment.
 - Export and review audit logs regularly.
 - Use least privilege for operators and service accounts.
 - Never deploy a fork that has relaxed the Site Prep Governor's closed
