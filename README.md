@@ -131,9 +131,9 @@ cost threshold (`site-prep.governor/supply-order-cost-threshold-usd`)
 MAY auto-commit at phase 3 when the governor is clean.
 
 ```bash
-clojure -M:dev:run    # demo: full coordination episode + every HARD hold
-clojure -M:dev:test   # test suite
-clojure -M:lint       # clj-kondo, errors fail
+kbb -M:dev:run    # demo: full coordination episode + every HARD hold
+kbb -M:dev:test   # test suite
+kbb -M:lint       # clj-kondo, errors fail
 ```
 
 ## License

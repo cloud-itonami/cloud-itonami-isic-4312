@@ -1,5 +1,5 @@
 (ns site-prep.sim
-  "Demo driver -- `clojure -M:dev:run`. Walks site-preparation lots through
+  "Demo driver -- `kbb -M:dev:run`. Walks site-preparation lots through
   a full coordination episode, exercising every governor check: log a
   site record (auto-commits) -> propose a site-operation schedule
   (escalates, human approves) -> flag a safety concern (ALWAYS escalates,
