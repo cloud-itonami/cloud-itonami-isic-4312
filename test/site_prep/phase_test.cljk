@@ -4,7 +4,7 @@
   NEVER be a member of any phase's `:auto` set. `:log-site-record` and
   `:order-supplies` ARE auto-eligible at phase 3 -- see `site-prep.phase`
   ns docstring 'Actuation' section."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [site-prep.phase :as phase]))
 
 (deftest schedule-site-operation-never-auto-at-any-phase

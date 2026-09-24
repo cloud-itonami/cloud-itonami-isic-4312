@@ -1,5 +1,5 @@
 (ns site-prep.registry-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [site-prep.registry :as r]))
 
 ;; ----------------------------- register-site-record -----------------------------
